@@ -1,0 +1,132 @@
+.indexHead {
+  padding-top: 1rem;
+  position: relative;
+  width: 100vw;
+  // height: 100vh;
+  padding-left: 0%;
+  overflow: hidden;
+  background-color: var(--clr-pink);
+  h1 {
+    font-size: 10rem;
+    text-transform: uppercase;
+    color: var(--clr-pink);
+    letter-spacing: 0.1em;
+    text-shadow: 0.1em 0.05em 0 var(--clr-black);
+    z-index: 1;
+
+    @include respond(desktop) {
+      font-size: 6rem;
+    }
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
+    @include respond(phone) {
+      margin-left: 3rem;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    // bottom: 0;
+    width: 100%;
+    // height: 100%;
+    height: 90vh;
+    background-color: var(--clr-black);
+    z-index: -1;
+  }
+  &::after {
+    // content: "KEEP OFF THE GRASS";
+    position: absolute;
+    top: 0.3em;
+    left: 0.4%;
+    letter-spacing: 0.1em;
+
+    color: var(--clr-pink);
+    // background-color: red;
+    z-index: 10;
+    height: 100%;
+    font-size: 10rem;
+  }
+}
+
+.section-body {
+  width: 100%;
+}
+
+.schedEmbed {
+  background-color: var(--clr-black);
+  padding: 5rem 15rem 10rem 15rem;
+  width: 100%;
+
+  @include respond(tab-port) {
+    padding: 5rem;
+  }
+}
+
+#welcome {
+  text-transform: none;
+}
+
+//BIO
+.section__bio {
+  // background-color: red;
+  height: 150%;
+  margin-top: -10rem;
+  // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  padding: 10rem 5rem;
+  padding-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--clr-pink);
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    padding: 7rem 3rem;
+  }
+
+  &--textbox {
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      font-size: 4.36rem;
+      font-weight: 900;
+      color: var(--clr-tan);
+    }
+    p {
+      font-size: 1.7rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+//flex rows
+.flexR-50 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
+}
+.flexC-50 {
+  width: 40%;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
+}
+
+.section__tan {
+  background-color: var(--clr-tan);
+}
+
+.section__fillerBox {
+  height: 100vh;
+  // margin-top: 50rem;
+}

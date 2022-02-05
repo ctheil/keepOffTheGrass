@@ -1,0 +1,19 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--clr-black);
+  line-height: 1.6;
+}
+
+p {
+  font-family: var(--typo-serif);
+}
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-size: 4.36rem;
+  font-weight: 900;
+  color: var(--clr-tan);
+}

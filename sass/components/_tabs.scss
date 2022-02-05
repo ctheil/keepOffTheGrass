@@ -1,0 +1,49 @@
+//HTML Markup
+.lyrics__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0.5rem;
+
+  &--label {
+    padding: 1rem 1.6rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: var(--clr-tan);
+    text-transform: uppercase;
+
+    @include respond(phone) {
+      margin-left: 1rem;
+    }
+  }
+  &--radio {
+    display: none;
+  }
+  &--content {
+    order: 1;
+    width: 100%;
+    display: none;
+    padding: 2rem 10rem;
+    margin-top: 10rem;
+
+    p {
+      color: var(--clr-tan);
+      font-size: 1.7rem;
+      font-family: var(--typo-serif);
+      // text-indent: 1rem;
+
+      &:not(last-of-type) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.lyrics__tabs--radio:checked + .lyrics__tabs--label {
+  font-weight: bold;
+  color: var(--clr-black);
+  background-color: var(--clr-pink);
+}
+.lyrics__tabs--radio:checked + .lyrics__tabs--label + .lyrics__tabs--content {
+  display: initial;
+}

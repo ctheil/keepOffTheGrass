@@ -1,0 +1,36 @@
+@keyframes aniImg {
+  0% {
+    transform: scale(1);
+    box-shadow: 1em 2em 1em rgba(#232323, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 1.5em 2.5em 4em rgba(#232323, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 1em 2em 1em rgba(#232323, 0.4);
+  }
+}
+
+@keyframes collapse {
+  from {
+    opacity: 1;
+    left: 0;
+  }
+  to {
+    opacity: 1;
+    left: -$navBar-height;
+  }
+}
+
+@keyframes open {
+  from {
+    opacity: 1;
+    left: -$iconBar-height;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}

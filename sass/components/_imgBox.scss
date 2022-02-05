@@ -1,0 +1,355 @@
+.imgBox {
+  padding: 20rem 5rem;
+  height: 120vh;
+  width: calc(100vw - $iconBar-height);
+  margin-top: -5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+
+  @include respond(tab-land) {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  @include respond(phone) {
+    flex-direction: column;
+    // align-content: center !important;
+  }
+  // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+  background-color: var(--clr-tan);
+
+  figcaption {
+    &:nth-of-type(1) {
+      text-transform: uppercase;
+      color: var(--clr-black);
+      z-index: 10;
+      font-size: 2rem;
+      position: absolute;
+      bottom: -0.5em;
+      left: 0.25em;
+
+      @include respond(phone) {
+        bottom: -0.5em;
+      }
+    }
+    &:nth-of-type(2) {
+      text-transform: uppercase;
+      color: var(--clr-black);
+      z-index: 10;
+      font-size: 2rem;
+      position: absolute;
+      top: -0.5em;
+      right: 0.25em;
+    }
+    &:nth-of-type(3) {
+      text-transform: uppercase;
+      color: var(--clr-black);
+      z-index: 10;
+      font-size: 2rem;
+      position: absolute;
+      top: -0.5em;
+      left: 0.25em;
+    }
+  }
+
+  &__img {
+    height: auto;
+    width: 100%;
+    position: relative;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
+  }
+}
+
+.imgBox__img {
+  &--box {
+    height: auto;
+    width: 100%;
+    position: relative;
+    box-shadow: 1em 2em 1em rgba(#232323, 0.4);
+
+    backface-visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+
+    @include respond(tab-land) {
+      width: 25%;
+    }
+    @include respond(tab-port) {
+      width: 25%;
+    }
+    @include respond(phone) {
+      width: 60%;
+    }
+  }
+  // &--1::before + &--2::before + &--3::before + &--4::before {
+  //   @include respond(tab-port) {
+  //     border: none;
+  //   }
+  // }
+  &--1 {
+    align-self: flex-start;
+    animation: aniImg 7s ease-in-out 2;
+    animation-delay: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 8.9em solid var(--clr-pink);
+      // background-color: red;
+      z-index: 1;
+
+      @include respond(tab-port) {
+        border: 5.5em solid var(--clr-pink);
+      }
+      @include respond(phone) {
+        border: 3.39em solid var(--clr-pink);
+      }
+    }
+  }
+  &--2 {
+    align-self: flex-end;
+    animation: aniImg 7s ease-in-out 2;
+    animation-delay: 1s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 5em solid var(--clr-pink);
+      // background-color: red;
+      z-index: 10;
+
+      @include respond(tab-port) {
+        border: 3em solid var(--clr-pink);
+      }
+    }
+  }
+  &--3 {
+    align-self: flex-start;
+    animation: aniImg 7s ease-in-out 2;
+    animation-delay: 2s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 8.9em solid var(--clr-pink);
+      // background-color: red;
+      z-index: 10;
+
+      @include respond(tab-port) {
+        border: 5.5em solid var(--clr-pink);
+      }
+      @include respond(phone) {
+        border: 3.39em solid var(--clr-pink);
+      }
+    }
+  }
+  &--4 {
+    align-self: flex-end;
+    animation: aniImg 7s ease-in-out 2;
+    animation-delay: 3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 5em solid var(--clr-pink);
+      // background-color: red;
+      z-index: 10;
+
+      @include respond(tab-port) {
+        border: 3em solid var(--clr-pink);
+      }
+    }
+  }
+}
+
+.imgBoxEPK {
+  // padding: 20rem 5rem;
+  // height: 120vh;
+  width: calc(100vw - $iconBar-height);
+  margin-top: -5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+
+  @include respond(tab-port) {
+    width: 90%;
+  }
+
+  figcaption {
+    &:nth-of-type(1) {
+      text-transform: uppercase;
+      color: var(--clr-black);
+      z-index: 10;
+      font-size: 2rem;
+      position: absolute;
+      bottom: -0.5em;
+      left: 0.25em;
+    }
+    &:nth-of-type(2) {
+      text-transform: uppercase;
+      color: var(--clr-black);
+      z-index: 10;
+      font-size: 2rem;
+      position: absolute;
+      top: -0.5em;
+      right: 0.25em;
+    }
+    &:nth-of-type(3) {
+      text-transform: uppercase;
+      color: var(--clr-black);
+      z-index: 10;
+      font-size: 2rem;
+      position: absolute;
+      top: -0.5em;
+      left: 0.25em;
+    }
+  }
+
+  &__img {
+    height: auto;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.imgBoxEPK__img {
+  &--box {
+    height: auto;
+    width: 100%;
+    position: relative;
+    box-shadow: 1em 2em 1em rgba(#232323, 0.4);
+
+    backface-visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+
+    @include respond(tab-land) {
+      width: 25%;
+    }
+    @include respond(tab-port) {
+      width: 25%;
+    }
+    @include respond(phone) {
+      width: 60%;
+    }
+  }
+  // &--1::before + &--2::before + &--3::before + &--4::before {
+  //   @include respond(tab-port) {
+  //     border: none;
+  //   }
+  // }
+  &--1 {
+    align-self: flex-start;
+    animation: aniImg 7s ease-in-out 2;
+    animation-delay: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 8.9em solid var(--clr-tan);
+      // background-color: red;
+      z-index: 1;
+
+      @include respond(tab-port) {
+        border: 5.5em solid var(--clr-tan);
+      }
+      @include respond(phone) {
+        border: 3.39em solid var(--clr-tan);
+      }
+    }
+  }
+  &--2 {
+    align-self: flex-end;
+    animation: aniImg 7s ease-in-out 2;
+    animation-delay: 1s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 5em solid var(--clr-tan);
+      // background-color: red;
+      z-index: 10;
+
+      @include respond(tab-port) {
+        border: 3em solid var(--clr-tan);
+      }
+    }
+  }
+  &--3 {
+    align-self: flex-start;
+    animation: aniImg 7s ease-in-out 2;
+    animation-delay: 2s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 8.9em solid var(--clr-tan);
+      // background-color: red;
+      z-index: 10;
+
+      @include respond(tab-port) {
+        border: 5.5em solid var(--clr-tan);
+      }
+      @include respond(phone) {
+        border: 3.39em solid var(--clr-tan);
+      }
+    }
+  }
+  &--4 {
+    align-self: flex-end;
+    animation: aniImg 7s ease-in-out 2;
+    animation-delay: 3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 5em solid var(--clr-tan);
+      // background-color: red;
+      z-index: 10;
+
+      @include respond(tab-port) {
+        border: 3em solid var(--clr-tan);
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.banner {
+  background-color: var(--clr-black);
+  display: flex;
+  padding: 7rem 10rem;
+  align-items: center;
+  gap: 5rem;
+  width: 100vw;
+  margin-right: 7rem;
+
+  @include respond(tab-land) {
+    padding: 5rem 7rem;
+  }
+  @include respond(tab-port) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 3rem;
+  }
+
+  &__textBox {
+    width: 50%;
+  }
+
+  h2 {
+    font-size: 3.8rem;
+    color: var(--clr-tan);
+    font-weight: 100;
+    font-family: var(--typo-serif);
+    font-weight: 400;
+    text-transform: lowercase;
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    span {
+      color: var(--clr-pink);
+      font-weight: 800;
+      position: relative;
+      // font-size: 6.14rem;
+      // text-transform: uppercase;
+
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: 90%;
+      //   left: 0;
+      //   right: 0;
+      //   height: 100%;
+
+      //   background-color: var(--clr-pink);
+      //   filter: blur(1.5em);
+      //   opacity: 0.5;
+
+      //   transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+      // }
+    }
+  }
+
+  &__cta {
+    position: relative;
+    display: inline-block;
+
+    text-decoration: none;
+    font-size: 3.8rem;
+    color: var(--clr-pink);
+    padding: 0.5em 0.5em;
+    border: 3px solid var(--clr-pink);
+    text-shadow: 0 0 0.25em var(--clr-pink), 0 0 0.25em rgba(#fff, 0.1);
+    box-shadow: inset 0 0 0.5em var(--clr-pink), 0em 0em 0.5em var(--clr-pink);
+
+    transition: all 0.1s linear;
+    z-index: 1;
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+
+    &--img {
+      display: flex;
+      height: 1.5em;
+      width: auto;
+      //invert color to red
+      // filter: invert(44%) sepia(80%) saturate(756%) hue-rotate(335deg)
+      //   brightness(90%) contrast(86%);
+      //invert color to pink
+      filter: brightness(0) saturate(100%) invert(92%) sepia(85%)
+        saturate(7150%) hue-rotate(293deg) brightness(103%) contrast(89%);
+      transition: all 0s linear;
+    }
+
+    &::before {
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      top: 110%;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background-color: var(--clr-pink);
+      filter: blur(1.5em);
+      opacity: 0.75;
+
+      transform: perspective(1em) rotateX(45deg) scale(1, 0.35);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: 0 0 2em 0.5em var(--clr-pink);
+      opacity: 0;
+      z-index: -1;
+
+      background-color: var(--clr-pink);
+      transition: all 0.1s linear;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--clr-black);
+      text-shadow: none;
+    }
+
+    //reset img color inversion to --clr-black
+    &:hover &--img {
+      filter: brightness(0) saturate(100%) invert(4%) sepia(31%) saturate(35%)
+        hue-rotate(320deg) brightness(105%) contrast(79%);
+    }
+    &:hover::after,
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
+
+// &--img {
+//   &:hover {
+//     filter: brightness(0) saturate(100%) invert(4%) sepia(31%)
+//       saturate(35%) hue-rotate(320deg) brightness(105%) contrast(79%);
+//   }
+// }
