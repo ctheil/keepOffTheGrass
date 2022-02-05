@@ -195,8 +195,18 @@
   justify-content: space-around;
   gap: 5rem;
 
+  @include respond(tab-land) {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
   @include respond(tab-port) {
     width: 90%;
+  }
+  @include respond(phone) {
+    flex-direction: column;
+    // align-content: center !important;
   }
 
   figcaption {

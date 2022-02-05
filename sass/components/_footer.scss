@@ -29,6 +29,11 @@
         filter: brightness(0) saturate(100%) invert(89%) sepia(77%)
           saturate(5991%) hue-rotate(293deg) brightness(103%) contrast(89%);
       }
+      img {
+        @include respond(tab-port) {
+          height: 4rem;
+        }
+      }
     }
   }
   h2 {
@@ -38,6 +43,11 @@
     margin-top: 2rem;
     letter-spacing: 0.2em;
     text-transform: lowercase;
+
+    @include respond(tab-port) {
+      font-size: 4rem;
+      text-align: center;
+    }
   }
   &--navi {
     margin-top: 2rem;
