@@ -1,43 +1,3 @@
-// //store navBar classes
-// var navClasses = document.getElementById("navBar").classList;
-
-// function downAction() {
-//   navClasses.remove("open");
-//   navClasses.add("collapse");
-// }
-// function upAction() {
-//   navClasses.remove("collapse");
-//   navClasses.add("open");
-// }
-
-// //returns current scroll position
-// var scrollTop = function () {
-//   return window.scrollY;
-// };
-
-// //initial scroll position
-// var scrollState = 0;
-
-// //Primary scroll event function
-
-// var scrollDetect = function (home, down, up) {
-//   //current pos
-//   var currentScroll = scrollTop();
-//   if (scrollTop() === 0) {
-//     home();
-//   } else if (currentScroll > scrollState) {
-//     down();
-//   } else {
-//     up();
-//   }
-//   //set previous scroll position
-//   scrollState = scrollTop();
-// };
-
-// window.addEventListener("scroll", function () {
-//   scrollDetect(homeAction, downAction, upAction);
-// });
-
 // Initial scroll position
 var scrollState = 0;
 
@@ -94,5 +54,3 @@ function upAction() {
 window.addEventListener("scroll", function () {
   scrollDetect(homeAction, downAction, upAction);
 });
-
-//Need to use document.querySelectorAll and write a loop to target each icon. Also need to extend the body when nav collapses
