@@ -3,6 +3,7 @@
   --clr-pink: #f1b0a2;
   --clr-red: #d86338;
   --clr-black: #232323;
+  --clr-grey: hsl(0, 0%, 45%);
   --clr-white: #fff;
   --typo-serif: "Playfair Display", serif;
   --typo-lato: "Lato", sans-serif;
@@ -502,7 +503,7 @@ h2 {
 
 .section-contact {
   padding: 15rem 5rem;
-  background-color: var(--clr-black);
+  background-color: var(--clr-tan);
   height: 100vh;
 }
 
@@ -966,6 +967,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .section__footer--social {
@@ -1059,6 +1061,27 @@ h2 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   color: var(--clr-pink);
+}
+
+.footNote {
+  color: var(--clr-grey);
+  font-size: 1.5rem;
+  font-family: var(--type-lato);
+  font-weight: 200;
+}
+
+.footNote__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footNote span {
+  color: var(--clr-tan);
 }
 
 #spotify {
