@@ -11,7 +11,7 @@
     text-transform: uppercase;
     color: var(--clr-pink);
     letter-spacing: 0.1em;
-    text-shadow: 0.1em 0.05em 0 var(--clr-black);
+    text-shadow: 0.1em 0.05em 0 var(--clr-tan);
     z-index: 1;
 
     @include respond(desktop) {
