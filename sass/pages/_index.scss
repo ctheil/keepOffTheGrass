@@ -51,6 +51,38 @@
   }
 }
 
+//should build a collapse function with button to open when at small res
+.header__social {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--clr-tan);
+  z-index: 12;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20rem;
+
+  transition: all 0.2s;
+  img {
+    height: 5rem;
+  }
+  a {
+    transition: all 0.2s;
+    &:hover,
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    width: 30rem;
+    padding: 3rem 2rem;
+  }
+}
+
 .schedEmbed {
   background-color: var(--clr-black);
   padding: 5rem 15rem 10rem 15rem;

@@ -45,6 +45,7 @@ body {
 .section-body {
   width: calc(100% - $navBar-height);
   overflow-x: hidden;
+  position: relative;
 }
 
 .bodyWrap {
@@ -214,6 +215,46 @@ h2 {
   z-index: 10;
   height: 100%;
   font-size: 10rem;
+}
+
+.header__social {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--clr-tan);
+  z-index: 12;
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 20rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.header__social img {
+  height: 5rem;
+}
+
+.header__social a {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.header__social a:hover, .header__social a:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.header__social:hover, .header__social:focus {
+  width: 30rem;
+  padding: 3rem 2rem;
 }
 
 .schedEmbed {
@@ -835,7 +876,7 @@ h2 {
   text-decoration: none;
   font-size: 3.8rem;
   color: var(--clr-pink);
-  padding: 0.5em 0.5em;
+  padding: 1em 1.5em;
   border: 3px solid var(--clr-pink);
   text-shadow: 0 0 0.25em var(--clr-pink), 0 0 0.25em rgba(255, 255, 255, 0.1);
   -webkit-box-shadow: inset 0 0 0.5em var(--clr-pink), 0em 0em 0.5em var(--clr-pink);
@@ -855,7 +896,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 1.5em;
+  height: 2em;
   width: auto;
   -webkit-filter: brightness(0) saturate(100%) invert(92%) sepia(85%) saturate(7150%) hue-rotate(293deg) brightness(103%) contrast(89%);
           filter: brightness(0) saturate(100%) invert(92%) sepia(85%) saturate(7150%) hue-rotate(293deg) brightness(103%) contrast(89%);
@@ -1156,6 +1197,20 @@ h2 {
   position: absolute;
   top: -0.5em;
   left: 0.25em;
+}
+
+.imgBox figcaption:nth-of-type(4) {
+  text-transform: uppercase;
+  color: var(--clr-black);
+  z-index: 10;
+  font-size: 2rem;
+  position: absolute;
+  bottom: -0.5em;
+  right: -0.6em;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
 .imgBox__img {
