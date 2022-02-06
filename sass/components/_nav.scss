@@ -11,6 +11,7 @@
   // background-attachment: fixed;
   width: $navBar-height;
   overflow: hidden;
+  z-index: 1000;
 
   @include respond(tab-port) {
     display: none;
@@ -95,6 +96,7 @@
   overflow: hidden;
   display: none;
   opacity: 0;
+  z-index: 1000;
 
   @include respond(tab-port) {
     display: initial;

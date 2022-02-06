@@ -567,6 +567,7 @@ h2 {
   background-color: var(--clr-black);
   width: 10vw;
   overflow: hidden;
+  z-index: 1000;
 }
 
 @media (max-width: 56.25em) {
@@ -646,6 +647,7 @@ h2 {
   overflow: hidden;
   display: none;
   opacity: 0;
+  z-index: 1000;
 }
 
 @media (max-width: 56.25em) {
