@@ -42,3 +42,31 @@
     }
   }
 }
+
+//TYPOGRAPHY:
+@mixin eloqReg {
+  font-family: eloquent-jf-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin eloqItal {
+  font-family: eloquent-jf-pro, serif;
+  font-weight: 400;
+  font-style: italic;
+}
+@mixin eloqSmallCapsReg {
+  font-family: eloquent-jf-small-caps-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin eloqSmallCapsRegMix {
+  font-family: eloquent-jf-small-caps-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(#232323, 0.7);
+}
+@mixin eloqSmallCapsItal {
+  font-family: eloquent-jf-small-caps-pro, serif;
+  font-weight: 400;
+  font-style: italic;
+}

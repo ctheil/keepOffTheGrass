@@ -23,9 +23,10 @@
   h2 {
     font-size: 3.8rem;
     color: var(--clr-tan);
-    font-weight: 100;
-    font-family: var(--typo-serif);
-    font-weight: 400;
+    // font-weight: 100;
+    // font-family: var(--typo-serif);
+    // font-weight: 400;
+    @include eloqReg;
     text-transform: lowercase;
 
     @include respond(tab-port) {
@@ -35,8 +36,9 @@
 
     span {
       color: var(--clr-pink);
-      font-weight: 800;
+      // font-weight: 800;
       position: relative;
+      @include eloqSmallCapsItal;
       // font-size: 6.14rem;
       // text-transform: uppercase;
 
