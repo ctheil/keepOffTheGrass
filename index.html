@@ -133,16 +133,42 @@
 
           <div class="announcement">
             <div class="announcement__cta">
-              <a
-                href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
-                class="banner__cta"
-                id="announcement__cta"
-                ><img
-                  src="sass/imgs/icons8-spotify.svg"
-                  alt="spotify logo"
-                  class="banner__cta--img"
-                  id="announcement__cta--img"
-              /></a>
+              <div class="announcement__cta--btn" id="btn-hide">
+                <a
+                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                  class="banner__cta"
+                  id="announcement__cta"
+                  ><img
+                    src="sass/imgs/icons8-spotify.svg"
+                    alt="spotify logo"
+                    class="banner__cta--img"
+                    id="announcement__cta--img"
+                /></a>
+              </div>
+              <div class="announcement__cta--btn" id="btn-hide">
+                <a
+                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                  class="banner__cta"
+                  id="announcement__cta"
+                  ><img
+                    src="sass/imgs/icons8-spotify.svg"
+                    alt="spotify logo"
+                    class="banner__cta--img"
+                    id="announcement__cta--img"
+                /></a>
+              </div>
+              <div class="announcement__cta--btn">
+                <a
+                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                  class="banner__cta"
+                  id="announcement__cta"
+                  ><img
+                    src="sass/imgs/icons8-spotify.svg"
+                    alt="spotify logo"
+                    class="banner__cta--img"
+                    id="announcement__cta--img"
+                /></a>
+              </div>
             </div>
             <div class="announcement__header">
               <h2 class="announcement__heading">01</h2>
@@ -173,20 +199,46 @@
             </div>
 
             <div class="announcement__cta">
-              <a
-                href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
-                class="banner__cta"
-                id="announcement__cta"
-                ><img
-                  src="sass/imgs/icons8-spotify.svg"
-                  alt="spotify logo"
-                  class="banner__cta--img"
-                  id="announcement__cta--img"
-              /></a>
+              <div class="announcement__cta--btn">
+                <a
+                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                  class="banner__cta"
+                  id="announcement__cta"
+                  ><img
+                    src="sass/imgs/icons8-spotify.svg"
+                    alt="spotify logo"
+                    class="banner__cta--img"
+                    id="announcement__cta--img"
+                /></a>
+              </div>
+              <div class="announcement__cta--btn" id="btn-hide">
+                <a
+                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                  class="banner__cta"
+                  id="announcement__cta"
+                  ><img
+                    src="sass/imgs/icons8-spotify.svg"
+                    alt="spotify logo"
+                    class="banner__cta--img"
+                    id="announcement__cta--img"
+                /></a>
+              </div>
+              <div class="announcement__cta--btn" id="btn-hide">
+                <a
+                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                  class="banner__cta"
+                  id="announcement__cta"
+                  ><img
+                    src="sass/imgs/icons8-spotify.svg"
+                    alt="spotify logo"
+                    class="banner__cta--img"
+                    id="announcement__cta--img"
+                /></a>
+              </div>
             </div>
             <div class="announcement__header">
               <h2 class="announcement__heading">02/<br />05</h2>
-              <div class="announcement__spacer"></div>
+
               <p class="announcement__header--repText">
                 Fake ID <br />
                 Kodak Moments <br />
@@ -248,6 +300,8 @@
               data-link-text-color="#f8ddc0"
             ></a>
           </div>
+
+          <div id="like_button_container"></div>
 
           <div class="imgBox">
             <div class="imgBox__img--1 imgBox__img--box">
@@ -410,6 +464,19 @@
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
         ></script>
       </wrapper>
+      <!-- Load React. -->
+      <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+      <script
+        src="https://unpkg.com/react@17/umd/react.development.js"
+        crossorigin
+      ></script>
+      <script
+        src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+        crossorigin
+      ></script>
+      <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+      <!-- Load our React component. -->
+      <script src="src/like_button.js"></script>
     </body>
   </main>
 </html>
