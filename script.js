@@ -54,3 +54,14 @@ function upAction() {
 window.addEventListener("scroll", function () {
   scrollDetect(homeAction, downAction, upAction);
 });
+
+// var checkInput = "Input Check = Bad";
+
+// function check() {
+//   if (checkInput === "Input Check = Good") {
+//     console.log("The check worked");
+//   } else {
+//     console.log("The Check Failed");
+//   }
+// }
+// check();
