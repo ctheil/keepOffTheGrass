@@ -127,10 +127,10 @@
       font-size: 1.7rem;
       line-height: 1.6;
       // @include eloqReg;
-      span {
-        @include eloqSmallCapsReg;
-        color: rgba(#232323, 0.7);
-      }
+      // span {
+      //   @include eloqSmallCapsReg;
+      //   color: rgba(#232323, 0.7);
+      // }
     }
   }
 }

@@ -53,6 +53,7 @@
   // }
   &__text {
     transition: all 0.2s;
+
     position: relative;
     align-self: center;
     margin-top: 5rem;
@@ -89,6 +90,7 @@
       font-size: 2rem;
       color: var(--clr-black);
       max-width: 50rem;
+      // @include eloqReg;
     }
   }
   &__img {
