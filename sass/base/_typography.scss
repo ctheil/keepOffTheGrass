@@ -17,3 +17,7 @@ h2 {
   font-weight: 900;
   color: var(--clr-tan);
 }
+
+.eloq {
+  @include eloqSmallCapsReg;
+}
