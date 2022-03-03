@@ -16,65 +16,53 @@
     <link rel="stylesheet" href="https://use.typekit.net/zfu1bqr.css" />
   </head>
   <main>
-    <body class="bodyInit" id="bodyGrow">
+    <body>
 
-      <wrapper class="bodyWrap">
+     
         <header class="indexHead--invert">
-          <nav class="siteNav" id="navBar">
-            <!-- <div class="siteNav__close">
-              <ion-icon name="caret-back-circle" id="navClose"></ion-icon>
-            </div> -->
-            <ul>
-              <li>
-                <a href="index.html" class="siteNav__link" id="navA">Home</a>
-              </li>
-              <li>
-                <a href="live.html" class="siteNav__link" id="navA">Live</a>
-              </li>
-              <li>
-                <a href="media.html" class="siteNav__link" id="navA">Media</a>
-              </li>
-              <li>
-                <a href="lyrics.html" class="siteNav__link" id="navA">Lyrics</a>
-              </li>
-              <li>
-                <a href="contact.html" class="siteNav__link" id="navA">Contact</a>
-              </li>
-            </ul>
-          </nav>
-  
-          <nav class="navIcon" id="navIcon">
-            <ul>
-              <li>
-                <a href="index.html" class="navIcon__link">
-                  <ion-icon name="home" class="navIcon__icon"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="live.html" class="navIcon__link">
-                  <ion-icon name="pulse" class="navIcon__icon"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="media.html" class="navIcon__link">
-                  <ion-icon name="images" class="navIcon__icon"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="lyrics.html" class="navIcon__link">
-                  <ion-icon name="musical-note" class="navIcon__icon"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="contact.html" class="navIcon__link">
-                  <ion-icon
-                    name="chatbox-ellipses"
-                    class="navIcon__icon"
-                  ></ion-icon>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <div class="nav">
+            <div class="nav__open">
+              <div class="nav__open--bkg"></div>
+              <div class="nav__open--icon absCenter">
+                <ion-icon name="menu" class="navIcon__icon"></ion-icon>
+              </div>
+            </div>
+            <nav class="nav__nav absCenter hideNav">
+              <div class="nav__bkg absCenter"></div>
+              <div class="nav__close">
+                <ion-icon name="close" class="navIcon__icon"></ion-icon>
+              </div>
+              <div class="nav__content absCenter">
+                <ul class="nav__list absCenter">
+                  <div class="nav__list--box">
+                    <li class="nav__list--item currentNav">
+                      <a href="index.html" class="nav__link"> home </a>
+                    </li>
+                  </div>
+                  <div class="nav__list--box">
+                    <li class="nav__list--item">
+                      <a href="live.html" class="nav__link"> live </a>
+                    </li>
+                  </div>
+                  <div class="nav__list--box">
+                    <li class="nav__list--item">
+                      <a href="media.html" class="nav__link"> media </a>
+                    </li>
+                  </div>
+                  <div class="nav__list--box">
+                    <li class="nav__list--item">
+                      <a href="lyrics.html" class="nav__link"> lyrics </a>
+                    </li>
+                  </div>
+                  <div class="nav__list--box">
+                    <li class="nav__list--item">
+                      <a href="contact.html" class="nav__link"> contact </a>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </nav>
+          </div>
           <h1>Epk</h1>
         </header>
   
@@ -221,7 +209,6 @@
           nomodule
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
         ></script>
-      </wrapper>
       </body>
   </main>
 </html>

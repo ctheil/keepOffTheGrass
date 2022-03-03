@@ -1,235 +1,380 @@
-.siteNav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  // padding: 1rem 3rem;
-  height: 100vh;
-  padding-top: 10rem;
-  background-color: var(--clr-black);
-  // background-image: url(../../sass/nav-bkgImg.png);
-  // background-size: 15%;
-  // background-attachment: fixed;
-  width: $navBar-height;
-  overflow: hidden;
-  z-index: 1000;
+// .siteNav {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   // padding: 1rem 3rem;
+//   height: 100vh;
+//   padding-top: 10rem;
+//   background-color: var(--clr-black);
+//   // background-image: url(../../sass/nav-bkgImg.png);
+//   // background-size: 15%;
+//   // background-attachment: fixed;
+//   width: $navBar-height;
+//   overflow: hidden;
+//   z-index: 1000;
 
-  @include respond(tab-port) {
-    display: none;
+//   @include respond(tab-port) {
+//     display: none;
+//   }
+
+//   &__close {
+//     ion-icon {
+//       // position: absolute;
+//       // top: 0;
+//       // right: -0.4em;
+//       color: var(--clr-tan);
+//       font-size: 5rem;
+//       z-index: 100;
+//     }
+//   }
+
+//   // display: none;
+//   ul {
+//     list-style: none;
+//     display: flex;
+//     flex-direction: column;
+//     // align-items: flex-start;
+//     justify-content: flex-start;
+//     gap: 5rem;
+//     font-size: 2rem;
+//     font-weight: 300;
+
+//     color: var(--clr-pink);
+
+//     li {
+//       width: 100%;
+//     }
+//   }
+
+//   .navIcon {
+//     // box-sizing: content-box;
+//     // position: fixed;
+//     // top: 0;
+//     // left: 0;
+//     // bottom: 0;
+//     // padding: 1rem 3rem;
+//     // height: 100%;
+//     // padding-top: 10rem;
+//     background-color: var(--clr-black);
+//     // background-image: url(../../sass/nav-bkgImg.png);
+//     // background-size: 15%;
+//     // background-attachment: fixed;
+//     // width: $iconBar-height;
+//     overflow: hidden;
+//     // display: none;
+//     // opacity: 0;
+//     // z-index: 1000;
+
+//     @include respond(tab-port) {
+//       display: initial;
+//       width: 4.8rem;
+//       opacity: 1;
+//     }
+
+//     @include respond(tab-port) {
+//       animation: none;
+//     }
+//     ul {
+//       list-style: none;
+//       display: flex;
+//       flex-direction: column;
+//       // align-items: flex-start;
+//       justify-content: flex-start;
+//       gap: 0rem;
+//       font-size: 5rem;
+//       font-weight: 300;
+//       // margin-left: 1rem;
+
+//       color: var(--clr-pink);
+
+//       li {
+//         width: 100%;
+//       }
+//     }
+
+//     &__link {
+//       // position: relative;
+//       z-index: 1;
+//       // width: 100%;
+//       text-transform: uppercase;
+//       background-color: var(--clr-black);
+//       padding-left: 1rem;
+
+//       // display: flex;
+//       // align-items: center;
+//       // justify-content: center;
+
+//       &:link,
+//       &:visited {
+//         text-decoration: none;
+//         color: var(--clr-pink);
+//         // padding: 1rem;
+//         width: 100%;
+//         transition: all 0.1s ease-in;
+//         transform: translateX(0) scale(0);
+//         box-shadow: none;
+//         backface-visibility: hidden;
+//       }
+//       &:hover,
+//       &:focus,
+//       &:active {
+//         color: var(--clr-black);
+//         transform: translate(1rem) scale(1.1);
+//         background-color: var(--clr-pink);
+//         // background-image: linear-gradient(to right, var(--clr-pink), transparent);
+//         box-shadow: 2rem 0 0 var(--clr-pink);
+//       }
+//     }
+//   }
+// }
+// //body Grow
+
+// .bodyInit {
+//   width: calc(100vw - $navBar-height);
+//   margin-left: 10vw;
+//   transition: all 0s linear;
+
+//   @include respond(tab-port) {
+//     width: calc(100vw - 5%);
+//     margin-left: 5%;
+//   }
+// }
+// .bodyGrow {
+//   width: calc(100vw - $iconBar-height);
+//   margin-left: 5%;
+//   transition: all 0s linear;
+
+//   @include respond(tab-port) {
+//     width: calc(100vw - 5%);
+//     margin-left: 5%;
+//   }
+// }
+
+// .collapse {
+//   animation: collapse 0.1s ease forwards;
+
+//   @include respond(tab-port) {
+//     animation: none;
+//   }
+// }
+// .open {
+//   animation: open 0.1s ease forwards;
+
+//   @include respond(tab-port) {
+//     animation: none;
+//   }
+// }
+// .iconOn {
+//   display: initial;
+//   opacity: 1;
+// }
+// .iconOff {
+//   display: none;
+//   opacity: 0;
+
+//   @include respond(tab-port) {
+//     display: initial;
+//     opacity: 1;
+//   }
+// }
+// .aOn {
+//   display: initial;
+//   opacity: 1;
+// }
+// .aOff {
+//   display: none;
+//   opacity: 0;
+// }
+
+.absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav {
+  position: relative;
+
+  transition: all 0.2s;
+
+  &__open {
+    position: fixed;
+    bottom: 4rem;
+    left: 4rem;
+    // background-color: red;
+    // z-index: 10000;
+    height: 7rem;
+    width: 7rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.2s;
+    border-radius: 50%;
+    // box-shadow: 0.7rem 0.7rem 0 var(--clr-pink);
+    z-index: 100;
+    backdrop-filter: blur(5px);
+
+    @include mobile(tab-port) {
+      top: 4rem;
+      left: 90%;
+    }
+
+    &--bkg {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background-image: linear-gradient(
+        to bottom right,
+        rgba($clr-tan, 0.3),
+        rgba($clr-tan, 0.7)
+      );
+      border: 5px solid var(--clr-black);
+      box-shadow: 0 0 3rem var(--clr-pink), inset 0rem 0rem 5rem var(--clr-tan);
+    }
+
+    &--icon {
+      // z-index: 10001;
+      ion-icon {
+        font-size: 5rem;
+        color: var(--clr-black);
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 7rem var(--clr-pink), inset 0rem 0rem 10rem var(--clr-tan);
+    }
+  }
+
+  &__nav {
+    z-index: 1000;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    // top: -100%;
+    transition: all 2s;
+  }
+
+  &__content {
+    width: 95vw;
+    padding: 2rem 5rem;
+    max-height: 60rem;
   }
 
   &__close {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    transform: scale(1);
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
     ion-icon {
-      // position: absolute;
-      // top: 0;
-      // right: -0.4em;
-      color: var(--clr-tan);
+      font-size: 8rem;
+    }
+
+    color: var(--clr-tan);
+  }
+
+  &__bkg {
+    height: 100%;
+    width: 100%;
+
+    // background-color: var(--clr-black);
+    background-image: radial-gradient(var(--clr-tan), var(--clr-black));
+    background-size: 240%;
+    transition: all 0.2s;
+  }
+
+  &__list {
+    list-style: none;
+
+    &--box {
+      display: flex;
+      align-items: center;
+      // flex-direction: column;
+      width: 100%;
+      // display: block;
+    }
+
+    &--item {
       font-size: 5rem;
-      z-index: 100;
-    }
-  }
+      padding: 2rem 3rem;
+      // width: 100%;
+      cursor: pointer;
 
-  // display: none;
-  ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    // align-items: flex-start;
-    justify-content: flex-start;
-    gap: 5rem;
-    font-size: 2rem;
-    font-weight: 300;
-
-    color: var(--clr-pink);
-
-    li {
-      width: 100%;
+      &:hover {
+        color: var(--clr-black);
+        transform: translate(1rem) scale(1.1);
+        background-color: var(--clr-pink);
+        // background-image: linear-gradient(to right, var(--clr-pink), transparent);
+        box-shadow: 2rem 0 0 var(--clr-pink);
+      }
+      &:hover .nav__link {
+        color: var(--clr-black);
+      }
     }
   }
 
   &__link {
     position: relative;
-    z-index: 1;
+    // z-index: 100000;
     width: 100%;
+    height: 100%;
     text-transform: uppercase;
-    background-color: var(--clr-black);
-
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
+    text-shadow: -0.2rem -0.2rem 0 var(--clr-black);
 
     &:link,
     &:visited {
       text-decoration: none;
       color: var(--clr-pink);
-      padding: 1rem;
-      width: 100%;
       transition: all 0.1s ease-in;
       transform: translateX(0) scale(0);
       box-shadow: none;
-      backface-visibility: hidden;
     }
-    &:hover,
-    &:focus,
-    &:active {
-      color: var(--clr-black);
-      transform: translate(1rem) scale(1.1);
-      background-color: var(--clr-pink);
-      // background-image: linear-gradient(to right, var(--clr-pink), transparent);
-      box-shadow: 2rem 0 0 var(--clr-pink);
-    }
-  }
-}
-.navIcon {
-  // box-sizing: content-box;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  // padding: 1rem 3rem;
-  // height: 100%;
-  padding-top: 10rem;
-  background-color: var(--clr-black);
-  // background-image: url(../../sass/nav-bkgImg.png);
-  // background-size: 15%;
-  // background-attachment: fixed;
-  width: $iconBar-height;
-  overflow: hidden;
-  display: none;
-  opacity: 0;
-  z-index: 1000;
-
-  @include respond(tab-port) {
-    display: initial;
-    width: 4.8rem;
-    opacity: 1;
+    // &:hover {
+    //   color: var(--clr-black);
+    // }
   }
 
-  @include respond(tab-port) {
-    animation: none;
-  }
-  ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    // align-items: flex-start;
-    justify-content: flex-start;
-    gap: 0rem;
-    font-size: 5rem;
-    font-weight: 300;
-    // margin-left: 1rem;
-
-    color: var(--clr-pink);
-
-    li {
-      width: 100%;
-    }
+  ion-icon {
+    font-size: 6rem;
+    text-shadow: -0.2rem -0.2rem 0 var(--clr-black);
   }
 
-  &__link {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    text-transform: uppercase;
-    background-color: var(--clr-black);
-    padding-left: 1rem;
-
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-
-    &:link,
-    &:visited {
-      text-decoration: none;
-      color: var(--clr-pink);
-      // padding: 1rem;
-      width: 100%;
-      transition: all 0.1s ease-in;
-      transform: translateX(0) scale(0);
-      box-shadow: none;
-      backface-visibility: hidden;
-    }
-    &:hover,
-    &:focus,
-    &:active {
-      color: var(--clr-black);
-      transform: translate(1rem) scale(1.1);
-      background-color: var(--clr-pink);
-      // background-image: linear-gradient(to right, var(--clr-pink), transparent);
-      box-shadow: 2rem 0 0 var(--clr-pink);
-    }
-  }
   &__icon {
-    // margin-right: 0.5em;
     text-align: center;
-
-    font-size: 3rem;
+    ion-icon {
+      color: var(--clr-black);
+    }
+    color: var(--clr-pink);
   }
 }
-
-//body Grow
-
-.bodyInit {
-  width: calc(100vw - $navBar-height);
-  margin-left: 10vw;
-  transition: all 0s linear;
-
-  @include respond(tab-port) {
-    width: calc(100vw - 5%);
-    margin-left: 5%;
-  }
-}
-.bodyGrow {
-  width: calc(100vw - $iconBar-height);
-  margin-left: 5%;
-  transition: all 0s linear;
-
-  @include respond(tab-port) {
-    width: calc(100vw - 5%);
-    margin-left: 5%;
-  }
-}
-
-.collapse {
-  animation: collapse 0.1s ease forwards;
-
-  @include respond(tab-port) {
-    animation: none;
-  }
-}
-.open {
-  animation: open 0.1s ease forwards;
-
-  @include respond(tab-port) {
-    animation: none;
-  }
-}
-.iconOn {
+// classes for JS DOM
+.showNav {
   display: initial;
   opacity: 1;
+  // top: 0;
 }
-.iconOff {
+.hideNav {
   display: none;
   opacity: 0;
+}
 
-  @include respond(tab-port) {
-    display: initial;
-    opacity: 1;
-  }
-}
-.aOn {
-  display: initial;
-  opacity: 1;
-}
-.aOff {
-  display: none;
-  opacity: 0;
+.aniBkg {
+  animation: aniNav 5s ease-in-out;
 }
 
 .currentNav {
   background-color: var(--clr-pink);
   box-shadow: 2rem 0 0 var(--clr-pink) !important;
-  color: var(--clr-black) !important;
-  ion-icon {
-    color: var(--clr-black);
+  color: var(--clr-black);
+  ion-icon,
+  a {
+    color: var(--clr-black) !important;
+    text-shadow: -0.2rem -0.2rem 0 var(--clr-tan);
   }
 }

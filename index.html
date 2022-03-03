@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="sass/icon-font.css" />
+    <!-- <link rel="stylesheet" href="sass/icon-font.css" /> -->
     <link rel="stylesheet" href="sass/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,77 +16,62 @@
     <link rel="stylesheet" href="https://use.typekit.net/zfu1bqr.css" />
   </head>
   <main>
-    <body class="bodyInit" id="bodyGrow">
-      <wrapper class="bodyWrap">
-        <header class="indexHead">
-          <nav class="siteNav" id="navBar">
-            <!-- <div class="siteNav__close">
-              <ion-icon name="caret-back-circle" id="navClose"></ion-icon>
-            </div> -->
-            <ul>
-              <li>
-                <a href="index.html" class="siteNav__link currentNav" id="navA"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a href="live.html" class="siteNav__link" id="navA">Live</a>
-              </li>
-              <li>
-                <a href="media.html" class="siteNav__link" id="navA">Media</a>
-              </li>
-              <li>
-                <a href="lyrics.html" class="siteNav__link" id="navA">Lyrics</a>
-              </li>
-              <li>
-                <a href="contact.html" class="siteNav__link" id="navA"
-                  >Contact</a
-                >
-              </li>
+    <body id="index">
+      <div class="nav">
+        <div class="nav__open">
+          <div class="nav__open--bkg"></div>
+          <div class="nav__open--icon absCenter">
+            <ion-icon name="menu" class="navIcon__icon"></ion-icon>
+          </div>
+        </div>
+        <nav class="nav__nav absCenter hideNav">
+          <div class="nav__bkg absCenter"></div>
+          <div class="nav__close">
+            <ion-icon name="close" class="navIcon__icon"></ion-icon>
+          </div>
+          <div class="nav__content absCenter">
+            <ul class="nav__list absCenter">
+              <div class="nav__list--box">
+                <li class="nav__list--item currentNav" id="indexLink">
+                  <a href="index.html" class="nav__link">home</a>
+                </li>
+              </div>
+              <div class="nav__list--box">
+                <li class="nav__list--item">
+                  <a href="live.html" class="nav__link" id="liveLink"> live </a>
+                </li>
+              </div>
+              <div class="nav__list--box">
+                <li class="nav__list--item">
+                  <a href="media.html" class="nav__link" id="mediaLink">
+                    media
+                  </a>
+                </li>
+              </div>
+              <div class="nav__list--box">
+                <li class="nav__list--item">
+                  <a href="lyrics.html" class="nav__link" id="lyricsLink">
+                    lyrics
+                  </a>
+                </li>
+              </div>
+              <div class="nav__list--box">
+                <li class="nav__list--item">
+                  <a href="contact.html" class="nav__link" id=""> contact </a>
+                </li>
+              </div>
             </ul>
-          </nav>
+          </div>
+        </nav>
+      </div>
+      <!-- <wrapper class="bodyWrap"> -->
+      <header class="indexHead">
+        <h1>Keep Off the Grass</h1>
+      </header>
 
-          <nav class="navIcon" id="navIcon">
-            <ul>
-              <li>
-                <a href="index.html" class="navIcon__link currentNav">
-                  <ion-icon name="home" class="navIcon__icon"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="live.html" class="navIcon__link">
-                  <ion-icon name="pulse" class="navIcon__icon"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="media.html" class="navIcon__link">
-                  <ion-icon name="images" class="navIcon__icon"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="lyrics.html" class="navIcon__link">
-                  <ion-icon
-                    name="musical-note"
-                    class="navIcon__icon"
-                  ></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="contact.html" class="navIcon__link">
-                  <ion-icon
-                    name="chatbox-ellipses"
-                    class="navIcon__icon"
-                  ></ion-icon>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <h1>Keep Off the Grass</h1>
-        </header>
-
-        <section class="section-body">
-          <!-- Should I make it relative to the actual body for fixed positioning? are social links worth it? most are coming from mobile-social anyways -->
-          <!-- <div class="header__social">
+      <section class="section-body">
+        <!-- Should I make it relative to the actual body for fixed positioning? are social links worth it? most are coming from mobile-social anyways -->
+        <!-- <div class="header__social">
             <a href="#">
               <img
                 src="sass/imgs/icons8-instagram 5.53.55 PM.svg"
@@ -108,7 +93,7 @@
               />
             </a>
           </div> -->
-          <!-- <div class="banner">
+        <!-- <div class="banner">
             <div class="banner__textBox">
               <h2>
                 <span>14th and Jasmine,</span><br />
@@ -121,7 +106,7 @@
         class="banner__cta"
         >Stream Now!</a
       > -->
-          <!--  <a
+        <!--  <a
               href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
               class="banner__cta"
               ><img
@@ -131,346 +116,337 @@
             /></a>
           </div> -->
 
-          <div class="announcement">
-            <div class="announcement__cta">
-              <div class="announcement__cta--btn" id="btn-hide">
-                <a
-                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
-                  class="banner__cta"
-                  id="announcement__cta"
-                  ><img
-                    src="sass/imgs/icons8-spotify.svg"
-                    alt="spotify logo"
-                    class="banner__cta--img"
-                    id="announcement__cta--img"
-                /></a>
-              </div>
-              <div class="announcement__cta--btn" id="btn-hide">
-                <a
-                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
-                  class="banner__cta"
-                  id="announcement__cta"
-                  ><img
-                    src="sass/imgs/icons8-spotify.svg"
-                    alt="spotify logo"
-                    class="banner__cta--img"
-                    id="announcement__cta--img"
-                /></a>
-              </div>
-              <div class="announcement__cta--btn">
-                <a
-                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
-                  class="banner__cta"
-                  id="announcement__cta"
-                  ><img
-                    src="sass/imgs/icons8-spotify.svg"
-                    alt="spotify logo"
-                    class="banner__cta--img"
-                    id="announcement__cta--img"
-                /></a>
-              </div>
+        <div class="announcement">
+          <div class="announcement__cta">
+            <div class="announcement__cta--btn" id="btn-hide">
+              <a
+                href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                class="banner__cta"
+                id="announcement__cta"
+                ><img
+                  src="sass/imgs/icons8-spotify.svg"
+                  alt="spotify logo"
+                  class="banner__cta--img"
+                  id="announcement__cta--img"
+              /></a>
             </div>
-            <div class="announcement__header">
-              <h2 class="announcement__heading">01</h2>
+            <div class="announcement__cta--btn" id="btn-hide">
+              <a
+                href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                class="banner__cta"
+                id="announcement__cta"
+                ><img
+                  src="sass/imgs/icons8-spotify.svg"
+                  alt="spotify logo"
+                  class="banner__cta--img"
+                  id="announcement__cta--img"
+              /></a>
+            </div>
+            <div class="announcement__cta--btn">
+              <a
+                href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                class="banner__cta"
+                id="announcement__cta"
+                ><img
+                  src="sass/imgs/icons8-spotify.svg"
+                  alt="spotify logo"
+                  class="banner__cta--img"
+                  id="announcement__cta--img"
+              /></a>
+            </div>
+          </div>
+          <div class="announcement__header">
+            <h2 class="announcement__heading">01</h2>
 
-              <p class="announcement__header--repText">
-                14th & Jasmine <br />
-                14th & Jasmine <br />
-                14th & Jasmine <br />
-                14th & Jasmine <br />
-                14th & Jasmine
-              </p>
-              <div class="announcement__img">
-                <img
-                  src="sass/imgs/Artboard 1 copy 4-100.jpg"
-                  alt="14th and Jasmine Album Artwork"
-                />
-                <div class="announcement__img--backBox"></div>
-              </div>
+            <p class="announcement__header--repText">
+              14th & Jasmine <br />
+              14th & Jasmine <br />
+              14th & Jasmine <br />
+              14th & Jasmine <br />
+              14th & Jasmine
+            </p>
+            <div class="announcement__img">
+              <img
+                src="sass/imgs/Artboard 1 copy 4-100.jpg"
+                alt="14th and Jasmine Album Artwork"
+              />
+              <div class="announcement__img--backBox"></div>
             </div>
-            <div class="announcement__text">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Aperiam dolorem rerum, ipsum blanditiis provident consequuntur
-                beatae ut odio, doloremque placeat doloribus. Provident ea
-                maxime voluptatum, saepe debitis at libero quaerat.
-              </p>
-              <div class="announcement__text--backBox"></div>
-            </div>
+          </div>
+          <div class="announcement__text">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
+              dolorem rerum, ipsum blanditiis provident consequuntur beatae ut
+              odio, doloremque placeat doloribus. Provident ea maxime
+              voluptatum, saepe debitis at libero quaerat.
+            </p>
+            <div class="announcement__text--backBox"></div>
+          </div>
 
-            <div class="announcement__cta">
-              <div class="announcement__cta--btn">
-                <a
-                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
-                  class="banner__cta"
-                  id="announcement__cta"
-                  ><img
-                    src="sass/imgs/icons8-spotify.svg"
-                    alt="spotify logo"
-                    class="banner__cta--img"
-                    id="announcement__cta--img"
-                /></a>
-              </div>
-              <div class="announcement__cta--btn" id="btn-hide">
-                <a
-                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
-                  class="banner__cta"
-                  id="announcement__cta"
-                  ><img
-                    src="sass/imgs/icons8-spotify.svg"
-                    alt="spotify logo"
-                    class="banner__cta--img"
-                    id="announcement__cta--img"
-                /></a>
-              </div>
-              <div class="announcement__cta--btn" id="btn-hide">
-                <a
-                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
-                  class="banner__cta"
-                  id="announcement__cta"
-                  ><img
-                    src="sass/imgs/icons8-spotify.svg"
-                    alt="spotify logo"
-                    class="banner__cta--img"
-                    id="announcement__cta--img"
-                /></a>
-              </div>
+          <div class="announcement__cta">
+            <div class="announcement__cta--btn">
+              <a
+                href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                class="banner__cta"
+                id="announcement__cta"
+                ><img
+                  src="sass/imgs/icons8-spotify.svg"
+                  alt="spotify logo"
+                  class="banner__cta--img"
+                  id="announcement__cta--img"
+              /></a>
             </div>
-            <div class="announcement__header">
-              <h2 class="announcement__heading">02/<br />05</h2>
-
-              <p class="announcement__header--repText">
-                Fake ID <br />
-                Kodak Moments <br />
-                Fake ID <br />
-                Kodak Moments<br />
-                Fake ID <br />
-                Kodak Moments <br />
-                Fake ID <br />
-                Kodak Moments<br />
-                Fake ID <br />
-                Kodak Moments
-              </p>
-              <div class="announcement__img">
-                <img
-                  src="sass/imgs/Artboard 1 copy 5-100.jpg"
-                  alt="14th and Jasmine Album Artwork"
-                />
-                <div class="announcement__img--backBox"></div>
-              </div>
+            <div class="announcement__cta--btn" id="btn-hide">
+              <a
+                href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                class="banner__cta"
+                id="announcement__cta"
+                ><img
+                  src="sass/imgs/icons8-spotify.svg"
+                  alt="spotify logo"
+                  class="banner__cta--img"
+                  id="announcement__cta--img"
+              /></a>
             </div>
+            <div class="announcement__cta--btn" id="btn-hide">
+              <a
+                href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz?si=0IcaE0LiS7SsO7l0EInwKw"
+                class="banner__cta"
+                id="announcement__cta"
+                ><img
+                  src="sass/imgs/icons8-spotify.svg"
+                  alt="spotify logo"
+                  class="banner__cta--img"
+                  id="announcement__cta--img"
+              /></a>
+            </div>
+          </div>
+          <div class="announcement__header">
+            <h2 class="announcement__heading">02/<br />05</h2>
 
-            <div class="announcement__text">
-              <p>
-                <span class="playSmallCaps">Fake ID is the oldest song</span> on
-                the record. I wrote it in 2019 when I was very very sick with
-                some sort of freshman year of college illness. It’s heavily
-                inspired by Superbad and the scene where McLovin gets his fake
-                id but I was also looking to get my own fake id and it got me
-                thinking about how i wouldn’t have minded being someone else.
-                IE: manifesting a different personality for myself
-              </p>
-              <p>
-                <span class="playSmallCaps"
-                  >I wrote Kodak Moments in the summer of 2020</span
-                >
-                and it’s an accumulation of hypothetical/real feelings that made
-                me feel a little manic and rowdy. Hence the nature of the song.
-              </p>
-              <div class="announcement__text--backBox"></div>
+            <p class="announcement__header--repText">
+              Fake ID <br />
+              Kodak Moments <br />
+              Fake ID <br />
+              Kodak Moments<br />
+              Fake ID <br />
+              Kodak Moments <br />
+              Fake ID <br />
+              Kodak Moments<br />
+              Fake ID <br />
+              Kodak Moments
+            </p>
+            <div class="announcement__img">
+              <img
+                src="sass/imgs/Artboard 1 copy 5-100.jpg"
+                alt="14th and Jasmine Album Artwork"
+              />
+              <div class="announcement__img--backBox"></div>
             </div>
           </div>
 
-          <div class="schedEmbed">
-            <script
-              charset="utf-8"
-              src="https://widget.bandsintown.com/main.min.js"
-            ></script>
-            <a
-              class="bit-widget-initializer"
-              data-artist-name="id_15382111"
-              data-font="lato"
-              data-language="en"
-              data-display-details="false"
-              data-text-color="#f8ddc0"
-              data-background-color="rgba(0,0,0,0)"
-              data-separator-color="#DDDDDD"
-              data-popup-background-color="#ffffff"
-              data-link-color="rgba(241,176,162,1)"
-              data-link-text-color="#f8ddc0"
-            ></a>
+          <div class="announcement__text">
+            <p>
+              <span class="playSmallCaps">Fake ID is the oldest song</span> on
+              the record. I wrote it in 2019 when I was very very sick with some
+              sort of freshman year of college illness. It’s heavily inspired by
+              Superbad and the scene where McLovin gets his fake id but I was
+              also looking to get my own fake id and it got me thinking about
+              how i wouldn’t have minded being someone else. IE: manifesting a
+              different personality for myself
+            </p>
+            <p>
+              <span class="playSmallCaps"
+                >I wrote Kodak Moments in the summer of 2020</span
+              >
+              and it’s an accumulation of hypothetical/real feelings that made
+              me feel a little manic and rowdy. Hence the nature of the song.
+            </p>
+            <div class="announcement__text--backBox"></div>
           </div>
+        </div>
 
-          <div id="like_button_container"></div>
+        <div class="schedEmbed">
+          <script
+            charset="utf-8"
+            src="https://widget.bandsintown.com/main.min.js"
+          ></script>
+          <a
+            class="bit-widget-initializer"
+            data-artist-name="id_15382111"
+            data-font="lato"
+            data-language="en"
+            data-display-details="false"
+            data-text-color="#f8ddc0"
+            data-background-color="rgba(0,0,0,0)"
+            data-separator-color="#DDDDDD"
+            data-popup-background-color="#ffffff"
+            data-link-color="rgba(241,176,162,1)"
+            data-link-text-color="#f8ddc0"
+          ></a>
+        </div>
 
-          <div class="imgBox">
-            <div class="imgBox__img--1 imgBox__img--box">
-              <img
-                src="sass/imgs/fox-1.jpeg"
-                alt="Cayden at the Fox"
-                class="imgBox__img"
-              />
-              <figcaption>Cayden Wemple</figcaption>
-              <figcaption>Keep</figcaption>
-              <figcaption>1</figcaption>
-              <figcaption>forest mondlane photography</figcaption>
-            </div>
-            <div class="imgBox__img--2 imgBox__img--box">
-              <img
-                src="sass/imgs/fox-2.jpeg"
-                alt="Cayden at the Fox"
-                class="imgBox__img"
-              />
-              <figcaption>Jake Demarco</figcaption>
-              <figcaption>Off</figcaption>
-              <figcaption>2</figcaption>
-              <figcaption>forest mondlane photography</figcaption>
-            </div>
-            <div class="imgBox__img--3 imgBox__img--box">
-              <img
-                src="sass/imgs/fox-3.jpeg"
-                alt="Cayden at the Fox"
-                class="imgBox__img"
-              />
-              <figcaption>Caleb Theil</figcaption>
-              <figcaption>the</figcaption>
-              <figcaption>3</figcaption>
-              <figcaption>forest mondlane photography</figcaption>
-            </div>
-            <div class="imgBox__img--4 imgBox__img--box">
-              <img
-                src="sass/imgs/fox-4.jpeg"
-                alt="Cayden at the Fox"
-                class="imgBox__img"
-              />
-              <figcaption id="welcome">welcome :)</figcaption>
-              <figcaption>Grass</figcaption>
-              <figcaption>:)</figcaption>
-              <figcaption>forest mondlane photography</figcaption>
-            </div>
+        <div class="imgBox">
+          <div class="imgBox__img--1 imgBox__img--box">
+            <img
+              src="sass/imgs/fox-1.jpeg"
+              alt="Cayden at the Fox"
+              class="imgBox__img"
+            />
+            <figcaption>Cayden Wemple</figcaption>
+            <figcaption>Keep</figcaption>
+            <figcaption>1</figcaption>
+            <figcaption>forest mondlane photography</figcaption>
           </div>
+          <div class="imgBox__img--2 imgBox__img--box">
+            <img
+              src="sass/imgs/fox-2.jpeg"
+              alt="Cayden at the Fox"
+              class="imgBox__img"
+            />
+            <figcaption>Jake Demarco</figcaption>
+            <figcaption>Off</figcaption>
+            <figcaption>2</figcaption>
+            <figcaption>forest mondlane photography</figcaption>
+          </div>
+          <div class="imgBox__img--3 imgBox__img--box">
+            <img
+              src="sass/imgs/fox-3.jpeg"
+              alt="Cayden at the Fox"
+              class="imgBox__img"
+            />
+            <figcaption>Caleb Theil</figcaption>
+            <figcaption>the</figcaption>
+            <figcaption>3</figcaption>
+            <figcaption>forest mondlane photography</figcaption>
+          </div>
+          <div class="imgBox__img--4 imgBox__img--box">
+            <img
+              src="sass/imgs/fox-4.jpeg"
+              alt="Cayden at the Fox"
+              class="imgBox__img"
+            />
+            <figcaption id="welcome">welcome :)</figcaption>
+            <figcaption>Grass</figcaption>
+            <figcaption>:)</figcaption>
+            <figcaption>forest mondlane photography</figcaption>
+          </div>
+        </div>
 
-          <section class="section__tan">
-            <section class="section__bio">
-              <div class="flexR-50">
-                <div class="section__bio--textbox">
-                  <h2>Our Story</h2>
-                  <p>
-                    <span class="playSmallCaps">
-                      “Born with the Rocky Mountains in sight,</span
-                    >
-                    Keep Off the Grass is an indie/rock band with midwest emo
-                    influences. Forming in 2018, the college roommates turned
-                    bandmates were playing the Denver scene and enjoying their
-                    time in pre-COVID existence. With the onset of quarantine,
-                    the group decided to bunker down and hyper-analyze their
-                    music. They coined their sound as “mountain emo.” With the
-                    musical aesthetic of bands such as American Football and Oso
-                    Oso, and the lyrical timbre of artists like Bright Eyes,
-                    Keep Off the Grass is poised to entice listeners on the
-                    entire alternative spectrum”
-                  </p>
-                </div>
-              </div>
-              <div class="flexC-50">
-                <div class="section__bio--textbox">
-                  <h2>Origins</h2>
-                  <p>
-                    <span class="playSmallCaps">
-                      Each member draws massive inspiration
-                    </span>
-                    from contradicting genres, mashing their oxymoronic tones
-                    into a beautiful, never-before heard timbre of the Mountain
-                    Emo genre, creating the ‘feel-bad song of the summer’ sound.
-                  </p>
-                </div>
-                <div class="section__bio--textbox">
-                  <h2>Mountain Emo</h2>
-                  <p>
-                    <span class="playSmallCaps"> Born in the Rockies,</span>
-                    mountain-emo is a unique blend of indie/rock, folk/rock,
-                    math rock, and midwest-emo. It carries the vocal tonality of
-                    artists like Bright Eyes and the guitar style of Johnny
-                    Marr… the groove of an early Radiohead song and the
-                    instrumental tone of a Sunny Day Real Estate song. Its
-                    niche, yet broad enough to appeal to listeners all over the
-                    board.
-                  </p>
-                </div>
-              </div>
-            </section>
-            <section class="section__footer">
-              <div class="section__footer--social">
-                <a target="_blank" href="https://www.instagram.com/kotg.band/">
-                  <img
-                    src="sass/imgs/icons8-facebook.svg"
-                    alt="Instagram Logo"
-                  />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz"
-                >
-                  <img
-                    src="sass/imgs/icons8-spotify.svg"
-                    alt="Spotify Logo"
-                    id="spotify"
-                  />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://www.tiktok.com/@caydenwemple?lang=en"
-                >
-                  <img src="sass/imgs/icons8-tiktok.svg" alt="TikTok Logo" />
-                </a>
-                <a
-                  href="https://www.youtube.com/channel/UCihg8Vj3B76vF34S_m0hcEA?view_as=subscriber"
-                >
-                  <img src="sass/imgs/icons8-youtube.svg" alt="YouTube Logo" />
-                </a>
-                <a target="_blank" href="https://www.facebook.com/band.kotg/">
-                  <img
-                    src="sass/imgs/icons8-facebook.svg"
-                    alt="facebook Logo"
-                  />
-                </a>
-              </div>
-              <div class="section__footer--navi">
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="live.html">Live</a></li>
-                  <li><a href="media.html">Media</a></li>
-                  <li><a href="lyrics.html">Lyrics</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
-              <h2>keep off the grass</h2>
-              <div class="footNote__box">
-                <p class="footNote">
-                  &copy; 2022| <span>Caleb Theil</span> &<span>
-                    Keep Off the Grass</span
+        <section class="section__tan">
+          <section class="section__bio">
+            <div class="flexR-50">
+              <div class="section__bio--textbox">
+                <h2>Our Story</h2>
+                <p>
+                  <span class="playSmallCaps">
+                    “Born with the Rocky Mountains in sight,</span
                   >
-                </p>
-                <p class="footNote">
-                  Designed and Developed by<span> Caleb Theil</span>
+                  Keep Off the Grass is an indie/rock band with midwest emo
+                  influences. Forming in 2018, the college roommates turned
+                  bandmates were playing the Denver scene and enjoying their
+                  time in pre-COVID existence. With the onset of quarantine, the
+                  group decided to bunker down and hyper-analyze their music.
+                  They coined their sound as “mountain emo.” With the musical
+                  aesthetic of bands such as American Football and Oso Oso, and
+                  the lyrical timbre of artists like Bright Eyes, Keep Off the
+                  Grass is poised to entice listeners on the entire alternative
+                  spectrum”
                 </p>
               </div>
-            </section>
+            </div>
+            <div class="flexC-50">
+              <div class="section__bio--textbox">
+                <h2>Origins</h2>
+                <p>
+                  <span class="playSmallCaps">
+                    Each member draws massive inspiration
+                  </span>
+                  from contradicting genres, mashing their oxymoronic tones into
+                  a beautiful, never-before heard timbre of the Mountain Emo
+                  genre, creating the ‘feel-bad song of the summer’ sound.
+                </p>
+              </div>
+              <div class="section__bio--textbox">
+                <h2>Mountain Emo</h2>
+                <p>
+                  <span class="playSmallCaps"> Born in the Rockies,</span>
+                  mountain-emo is a unique blend of indie/rock, folk/rock, math
+                  rock, and midwest-emo. It carries the vocal tonality of
+                  artists like Bright Eyes and the guitar style of Johnny Marr…
+                  the groove of an early Radiohead song and the instrumental
+                  tone of a Sunny Day Real Estate song. Its niche, yet broad
+                  enough to appeal to listeners all over the board.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="section__footer">
+            <div class="section__footer--social">
+              <a target="_blank" href="https://www.instagram.com/kotg.band/">
+                <img src="sass/imgs/icons8-facebook.svg" alt="Instagram Logo" />
+              </a>
+              <a
+                target="_blank"
+                href="https://open.spotify.com/artist/4L2SpHR7ef7bLh4bPsFqzz"
+              >
+                <img
+                  src="sass/imgs/icons8-spotify.svg"
+                  alt="Spotify Logo"
+                  id="spotify"
+                />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@caydenwemple?lang=en"
+              >
+                <img src="sass/imgs/icons8-tiktok.svg" alt="TikTok Logo" />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCihg8Vj3B76vF34S_m0hcEA?view_as=subscriber"
+              >
+                <img src="sass/imgs/icons8-youtube.svg" alt="YouTube Logo" />
+              </a>
+              <a target="_blank" href="https://www.facebook.com/band.kotg/">
+                <img src="sass/imgs/icons8-facebook.svg" alt="facebook Logo" />
+              </a>
+            </div>
+            <div class="section__footer--navi">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="live.html">Live</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="lyrics.html">Lyrics</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <h2>keep off the grass</h2>
+            <div class="footNote__box">
+              <p class="footNote">
+                &copy; 2022| <span>Caleb Theil</span> &<span>
+                  Keep Off the Grass</span
+                >
+              </p>
+              <p class="footNote">
+                Designed and Developed by<span> Caleb Theil</span>
+              </p>
+            </div>
           </section>
         </section>
-        <script src="script.js"></script>
-        <script
-          type="module"
-          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-        ></script>
-        <script
-          nomodule
-          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-        ></script>
-      </wrapper>
+      </section>
+      <script src="script.js"></script>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+      <!-- </wrapper> -->
       <!-- Load React. -->
       <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-      <script
+      <!-- <script
         src="https://unpkg.com/react@17/umd/react.development.js"
         crossorigin
       ></script>
@@ -480,7 +456,7 @@
       ></script>
       <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
       <!-- Load our React component. -->
-      <script src="src/like_button.js"></script>
+      <!-- <script src="src/like_button.js"></script> -->
     </body>
   </main>
 </html>
