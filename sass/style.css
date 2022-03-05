@@ -191,6 +191,15 @@ h2 {
   padding-left: 0%;
   overflow: hidden;
   background-color: var(--clr-pink);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .indexHead h1 {
@@ -200,6 +209,7 @@ h2 {
   letter-spacing: 0.1em;
   text-shadow: 0.1em 0.05em 0 var(--clr-tan);
   z-index: 1;
+  width: 75%;
 }
 
 @media (max-width: 87.5em) {
@@ -211,6 +221,7 @@ h2 {
 @media (max-width: 56.25em) {
   .indexHead h1 {
     font-size: 4rem;
+    width: 100%;
   }
 }
 
@@ -280,18 +291,6 @@ h2 {
 .header__social:hover, .header__social:focus {
   width: 30rem;
   padding: 3rem 2rem;
-}
-
-.schedEmbed {
-  background-color: var(--clr-black);
-  padding: 5rem 15rem 10rem 15rem;
-  width: 100%;
-}
-
-@media (max-width: 56.25em) {
-  .schedEmbed {
-    padding: 5rem;
-  }
 }
 
 #welcome {
@@ -376,6 +375,32 @@ h2 {
 
 .section__fillerBox {
   height: 100vh;
+}
+
+.schedEmbed {
+  background-color: var(--clr-black);
+  padding: 5rem 15rem 10rem 15rem;
+  max-width: 100%;
+  width: 70%;
+}
+
+.schedEmbed__wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 56.25em) {
+  .schedEmbed {
+    padding: 5rem;
+  }
 }
 
 .epk {

@@ -1,0 +1,16 @@
+.schedEmbed {
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  background-color: var(--clr-black);
+  padding: 5rem 15rem 10rem 15rem;
+  max-width: 100%;
+  width: 70%;
+
+  @include respond(tab-port) {
+    padding: 5rem;
+  }
+}

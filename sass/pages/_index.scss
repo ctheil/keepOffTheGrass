@@ -6,6 +6,9 @@
   padding-left: 0%;
   overflow: hidden;
   background-color: var(--clr-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   h1 {
     font-size: 10rem;
     text-transform: uppercase;
@@ -13,12 +16,14 @@
     letter-spacing: 0.1em;
     text-shadow: 0.1em 0.05em 0 var(--clr-tan);
     z-index: 1;
+    width: 75%;
 
     @include respond(desktop) {
       font-size: 6rem;
     }
     @include respond(tab-port) {
       font-size: 4rem;
+      width: 100%;
     }
     @include respond(phone) {
       margin-left: 3rem;
@@ -80,16 +85,6 @@
   &:focus {
     width: 30rem;
     padding: 3rem 2rem;
-  }
-}
-
-.schedEmbed {
-  background-color: var(--clr-black);
-  padding: 5rem 15rem 10rem 15rem;
-  width: 100%;
-
-  @include respond(tab-port) {
-    padding: 5rem;
   }
 }
 
