@@ -1,3 +1,5 @@
+"use strict";
+console.time("script");
 // // Initial scroll position
 // var scrollState = 0;
 
@@ -63,6 +65,95 @@
 //   }
 // }
 // check();
+// const setCurrentNav = document.querySelectorAll(".siteNav__link").classList;
+// const navItem = document.querySelectorAll(".nav__list--item");
+// console.log(navLink.url);
+// console.log(navItem);
+
+// console.log("body id = index", bodyId === "index");
+// console.log(navLink);
+// console.log("navLink = home", navLink[0].innerHTML === "home");
+
+// const navScan = (nav, id) => {
+//   for (let i = 0; i < nav.length; i++) {
+//     if nav[i]
+//   }
+// }
+// if (navItem.classList.contains("currentNav") && bodyID === "index") {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+// console.log(document.body.id);
+// if (navItem.classList.contains("currentNav") && bodyID === "index") {
+//   continue;
+// } else if (){
+//   console.log(false);
+// }
+
+// console.log(idTest);
+
+// if (idCheck) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// const checkPage = () => {
+//   if(pageLink.classList.includes('currentNav') && window.location.href.contains('index'))
+// }
+// const currentUrl = window.location.href;
+// console.log(currentUrl);
+// const bodyCheck = document.body.id;
+// const linkCheck = document.getElementById("indexLink").textContent;
+// console.log(linkCheck, typeof linkCheck);
+// console.log(bodyCheck);
+// const currentPage = () => {
+//   if (bodyCheck === "index") {
+//   }
+// };
+// BUG this is telling me they're not equal... linkCheck returns 'home', but when I use that string to test the boolean, it returns false
+// if (linkCheck == "home") {
+//   console.log("Yes");
+// } else {
+//   console.log("No");
+// }
+// const pageCheck = () => {
+//   for (let i = 0; i < navLink.length - 1; i++) {
+//     if (navLink[i].url == currentUrl) {
+//       navItem[i].classList.add("currentNav");
+//       console.log(currentUrl);
+//       console.log("test");
+//       console.log(navLink[i].href);
+//     } else {
+//       continue;
+//     }
+//   }
+// };
+// pageCheck();
+
+// console.log(
+//   arrOne[i].bodyIdProp,
+//   arrTwo[i].innerHTML,
+//   arrOne[i].linkTextProp,
+//   bodyId
+// );
+// console.log(
+//   "checkTrue",
+//   arrOne[i].bodyIdProp === bodyId,
+//   arrTwo[i].innerHTML == arrOne[i].linkTextProp
+// );
+// console.log(`${arrOne[i].bodyIdProp}Link`);
+// console.log("if was true");
+// // navItem.classList.add("current nav");
+// console.log("bodyID =", arrOne[i].bodyIdProp);
+// console.log(
+//   document.getElementById(`${arrOne[i].bodyIdProp}Link`).classList
+// );
+// console.log(
+//   "looking for this?",
+//   document.getElementById(`${arrOne[i].bodyIdProp}Link`).classList
+// );
 
 // new nav js build
 
@@ -85,40 +176,52 @@ closeNav.addEventListener("click", function close() {
 });
 
 //currentNav
-const setCurrentNav = document.querySelectorAll(".siteNav__link").classList;
-const navLink = document.querySelectorAll(".nav__link");
-const navItem = document.querySelectorAll(".nav__list--item");
-console.log(navLink.url);
 
-// const checkPage = () => {
-//   if(pageLink.classList.includes('currentNav') && window.location.href.contains('index'))
-// }
-// const currentUrl = window.location.href;
-// console.log(currentUrl);
-const bodyCheck = document.body.id;
-const linkCheck = document.getElementById("indexLink").textContent;
-console.log(linkCheck, typeof linkCheck);
-console.log(bodyCheck);
-// const currentPage = () => {
-//   if (bodyCheck === "index") {
-//   }
-// };
-// BUG this is telling me theyre not equal... linkCheck returns 'home', but when I use that string to test the boolean, it returns false
-if (linkCheck == "home") {
-  console.log("Yes");
-} else {
-  console.log("No");
-}
-// const pageCheck = () => {
-//   for (let i = 0; i < navLink.length - 1; i++) {
-//     if (navLink[i].url == currentUrl) {
-//       navItem[i].classList.add("currentNav");
-//       console.log(currentUrl);
-//       console.log("test");
-//       console.log(navLink[i].href);
-//     } else {
-//       continue;
-//     }
-//   }
-// };
-// pageCheck();
+const navLink = document.querySelectorAll(".nav__link");
+
+const navItem = document.querySelectorAll(".nav__list--item");
+const idCheck = document.getElementById("index");
+const bodyId = document.body.id;
+
+const currentNavArr = [
+  {
+    linkTextProp: "home",
+    bodyIdProp: "index",
+  },
+  {
+    linkTextProp: "live",
+    bodyIdProp: "live",
+  },
+  {
+    linkTextProp: "media",
+    bodyIdProp: "media",
+  },
+  {
+    linkTextProp: "lyrics",
+    bodyIdProp: "lyrics",
+  },
+  {
+    linkTextProp: "contact",
+    bodyIdProp: "contact",
+  },
+];
+
+const currentNavFunc = (arrOne, arrTwo) => {
+  for (let i = 0; i < currentNavArr.length; i++) {
+    if (
+      arrOne[i].bodyIdProp === bodyId &&
+      arrTwo[i].innerHTML === arrOne[i].linkTextProp
+    ) {
+      document
+        .getElementById(`${arrOne[i].bodyIdProp}Link`)
+        .classList.add("currentNav");
+      console.log("beforeBreak");
+      break;
+    } else {
+      console.log(false);
+    }
+  }
+};
+currentNavFunc(currentNavArr, navLink);
+
+console.timeEnd("script");

@@ -3,8 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZG2HSQ4DRG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <link rel="stylesheet" href="sass/icon-font.css" />
+  gtag('config', 'G-ZG2HSQ4DRG');
+</script>
+
+    <!-- <link rel="stylesheet" href="sass/icon-font.css" /> -->
     <link rel="stylesheet" href="sass/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,28 +45,32 @@
               <div class="nav__content absCenter">
                 <ul class="nav__list absCenter">
                   <div class="nav__list--box">
-                    <li class="nav__list--item currentNav">
-                      <a href="index.html" class="nav__link"> home </a>
+                    <li class="nav__list--item" id="indexLink">
+                      <a href="index.html" class="nav__link">home</a>
                     </li>
                   </div>
                   <div class="nav__list--box">
                     <li class="nav__list--item">
-                      <a href="live.html" class="nav__link"> live </a>
+                      <a href="live.html" class="nav__link" id="liveLink">live</a>
                     </li>
                   </div>
                   <div class="nav__list--box">
                     <li class="nav__list--item">
-                      <a href="media.html" class="nav__link"> media </a>
+                      <a href="media.html" class="nav__link" id="mediaLink"
+                        >media</a
+                      >
                     </li>
                   </div>
                   <div class="nav__list--box">
                     <li class="nav__list--item">
-                      <a href="lyrics.html" class="nav__link"> lyrics </a>
+                      <a href="lyrics.html" class="nav__link" id="lyricsLink"
+                        >lyrics</a
+                      >
                     </li>
                   </div>
                   <div class="nav__list--box">
                     <li class="nav__list--item">
-                      <a href="contact.html" class="nav__link"> contact </a>
+                      <a href="contact.html" class="nav__link" id="">contact</a>
                     </li>
                   </div>
                 </ul>
@@ -89,7 +103,7 @@
            </div>
            <div class="epk__textBox--box">
              <div class="epk__video">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/AbapEvPYIl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px; box-shadow: 1em 1em 0 rgba(0, 0, 0, 0.2);"></iframe>
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AbapEvPYIl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px; box-shadow: 1em 1em 0 rgba(0, 0, 0, 0.2);"></iframe>
              </div>
              <div class="epk__quote">
                <blockquote>[Wemple’s] vocal inflections are subtle and evocative, and serve as his primary weapon as he unveils doubts and insecurities about himself and the world around him.</blockquote>

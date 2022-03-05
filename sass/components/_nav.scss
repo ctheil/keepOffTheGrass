@@ -370,11 +370,12 @@
 
 .currentNav {
   background-color: var(--clr-pink);
-  box-shadow: 2rem 0 0 var(--clr-pink) !important;
-  color: var(--clr-black);
-  ion-icon,
-  a {
-    color: var(--clr-black) !important;
-    text-shadow: -0.2rem -0.2rem 0 var(--clr-tan);
-  }
+  box-shadow: 2rem 0 0 var(--clr-pink);
+  color: var(--clr-black) !important;
+  text-shadow: -0.2rem -0.2rem 0 var(--clr-tan);
+  // ion-icon,
+  // a {
+  //   color: var(--clr-black) !important;
+
+  // }
 }
