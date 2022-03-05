@@ -34,3 +34,12 @@
     left: 0;
   }
 }
+
+@keyframes aniNav {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 240%;
+  }
+}
