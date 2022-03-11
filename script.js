@@ -227,16 +227,69 @@ currentNavFunc(currentNavArr, navLink);
 console.timeEnd("script");
 
 //landing anima
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+// console.log(window.scroll() === true);
+// let test = window.events.scroll() === true;
+const runLanding = () => {
+  const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+  tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
+  tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
+  tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
+  tl.fromTo(".big-text", { opacity: 0 }, { opacity: 1, duration: 1 });
+  tl.fromTo(
+    ".big-text__icon",
+    { opacity: 0 },
+    { opacity: 1, duration: 1 },
+    "-=1"
+  );
+  tl.fromTo("#logo", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+};
+const intro = document.querySelector(".intro");
+const isAtTop = () => {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    console.log(true);
+    // intro.classList.add("hidden");
+    // intro.style("display: none");
+    document.getElementById("intro").style.display = "none";
+    return true;
+  } else {
+    return false;
+    console.log(false);
+  }
+};
+const ifIsAtTop = () => {
+  if (isAtTop() === true) {
+    console.log(true, "dont run anima");
+    return null;
+  } else {
+    runLanding();
+    console.log(false, "run anima");
+  }
+};
+window.onload = ifIsAtTop();
 
-tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
-tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
-tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
-tl.fromTo(".big-text", { opacity: 0 }, { opacity: 1, duration: 1 });
-tl.fromTo(
-  ".big-text__icon",
-  { opacity: 0 },
-  { opacity: 1, duration: 1 },
-  "-=1"
-);
-tl.fromTo("#logo", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+// const scrollTest = () => {
+//   if (
+//     document.body.scrollTop <= 10 ||
+//     document.documentElement.scrollTop <= 10
+//   )
+// };
+// console.log(
+//   "test-scroll",
+//   document.body.scrollTop <= 10 || document.documentElement.scrollTop <= 10
+// );
+// let testScr = document.body.scrollTop < 10 ? true : false;
+//scrollAnimation
+// const scrollToBody = document.getElementById("scrollToBody");
+// const toTop = () => window.scrollTo({ top: "10rem", behavior: "smooth" });
+
+// // const scrollHandler = document.addEventListener('scroll', )
+// const isAtTop = () => {
+// if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)
+
+// };
+
+// if (isAtTop() === true) {
+//   console.log("if true", true);
+// } else {
+//   console.log("if false", false);
+// }
