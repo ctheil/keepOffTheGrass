@@ -27,12 +27,18 @@ body {
   background-color: var(--clr-black);
   overflow-x: hidden;
 }
-
 .section-body {
-  width: calc(100% - $navBar-height);
-  overflow-x: hidden;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+// .section-body {
+//   width: calc(100% - $navBar-height);
+//   overflow-x: hidden;
+//   position: relative;
+// }
 
 .bodyWrap {
   overflow-x: hidden;

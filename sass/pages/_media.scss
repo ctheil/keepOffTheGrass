@@ -1,0 +1,17 @@
+.youTube {
+  &__embed {
+    padding: 5rem;
+    width: 100%;
+    // height: auto;
+    aspect-ratio: 1.77777777777778;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100rem;
+  }
+  // &__hide {
+  //   height: 5rem;
+
+  //   width: 5rem;
+  // }
+}
