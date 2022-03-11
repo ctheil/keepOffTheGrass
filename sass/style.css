@@ -90,6 +90,10 @@ h2 {
   font-family: var(--typo-serif);
 }
 
+.boldSpan {
+  font-weight: bold;
+}
+
 @-webkit-keyframes aniImg {
   0% {
     -webkit-transform: scale(1);
@@ -426,8 +430,8 @@ h2 {
 }
 
 .youTube__embed {
-  padding: 5rem;
-  width: 100%;
+  padding: 5rem 2rem;
+  width: 100vw;
   aspect-ratio: 1.77777777777778;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -438,7 +442,64 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-height: 100rem;
+  gap: 5rem;
+}
+
+.youTube__pseudo {
+  width: 100vw;
+  background-color: var(--clr-tan);
+  z-index: 100;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+  padding: 2rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.youTube__pseudo img {
+  cursor: pointer;
+}
+
+.youTube__pseudo img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.youTube__pseudo::before {
+  content: "Laughing Stock @ The Fox";
+  font-size: 3rem;
+  font-family: var(--typo-serif);
+  font-weight: 300;
+  margin-left: 1rem;
+}
+
+.youTube__pseudo--real {
+  background: var(--clr-tan);
+  z-index: 100;
+}
+
+.youTube__pseudo iframe {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 5px;
 }
 
 .schedEmbed {
@@ -1151,6 +1212,13 @@ h2 {
           transform: scale(1.16);
 }
 
+@media (max-width: 37.5em) {
+  #spotify {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .lyrics__tabs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1187,6 +1255,12 @@ h2 {
   display: none;
   padding: 2rem 10rem;
   margin-top: 10rem;
+}
+
+@media (max-width: 37.5em) {
+  .lyrics__tabs--content {
+    margin-top: 2rem;
+  }
 }
 
 .lyrics__tabs--content p {
@@ -1806,6 +1880,12 @@ h2 {
   font-size: 2rem;
 }
 
+@media (max-width: 37.5em) {
+  .announcement {
+    gap: 2rem;
+  }
+}
+
 .announcement__header {
   position: relative;
   -ms-flex-item-align: center;
@@ -1817,6 +1897,12 @@ h2 {
   padding: 0 20rem;
   gap: 5rem;
   max-width: 90vw;
+}
+
+@media (max-width: 37.5em) {
+  .announcement__header {
+    margin-bottom: 7rem;
+  }
 }
 
 .announcement__header--repText {
@@ -1852,6 +1938,18 @@ h2 {
   background-image: linear-gradient(to bottom, var(--clr-pink) 0%, var(--clr-pink) 50%, var(--clr-tan) 50%, var(--clr-tan) 100%);
 }
 
+@media (max-width: 37.5em) {
+  .announcement__text {
+    background: var(--clr-tan);
+    width: 100vw;
+    min-height: 30rem;
+    margin-top: -60%;
+    -webkit-box-shadow: -1rem -1rem 1rem rgba(0, 0, 0, 0.3);
+            box-shadow: -1rem -1rem 1rem rgba(0, 0, 0, 0.3);
+    padding: 4rem 4rem;
+  }
+}
+
 .announcement__text--backBox {
   height: 100%;
   width: 100%;
@@ -1861,6 +1959,12 @@ h2 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--clr-tan)), color-stop(50%, var(--clr-tan)), color-stop(50%, var(--clr-pink)), to(var(--clr-pink)));
   background-image: linear-gradient(to bottom, var(--clr-tan) 0%, var(--clr-tan) 50%, var(--clr-pink) 50%, var(--clr-pink) 100%);
   z-index: -1;
+}
+
+@media (max-width: 37.5em) {
+  .announcement__text--backBox {
+    display: none;
+  }
 }
 
 .announcement__text p {
@@ -1879,6 +1983,12 @@ h2 {
   z-index: 10;
 }
 
+@media (max-width: 37.5em) {
+  .announcement__img img {
+    height: 40rem;
+  }
+}
+
 .announcement__img--backBox {
   height: 25rem;
   aspect-ratio: 1;
@@ -1887,6 +1997,12 @@ h2 {
   left: 2rem;
   background-color: var(--clr-tan);
   z-index: -1;
+}
+
+@media (max-width: 37.5em) {
+  .announcement__img--backBox {
+    display: none;
+  }
 }
 
 .announcement__cta {
@@ -1902,6 +2018,12 @@ h2 {
   margin-bottom: 12rem;
 }
 
+@media (max-width: 37.5em) {
+  .announcement__cta {
+    margin-bottom: 5rem;
+  }
+}
+
 @media (min-width: 300px) {
   .announcement__header {
     -webkit-box-orient: vertical;
@@ -1911,7 +2033,7 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 2rem;
+    gap: 10rem;
   }
   .announcement__text {
     -webkit-box-orient: vertical;
@@ -1990,7 +2112,7 @@ h2 {
 }
 
 .landing ion-icon {
-  color: rgba(103, 129, 144, 0.9);
+  color: var(--clr-tan);
   font-size: 8rem;
   position: absolute;
   bottom: 0%;
@@ -2071,6 +2193,12 @@ h2 {
 
 .slider {
   background: #678190;
+}
+
+@media (max-width: 37.5em) {
+  .slider {
+    background-position: 29%;
+  }
 }
 
 .sliderTwo {

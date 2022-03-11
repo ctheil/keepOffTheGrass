@@ -101,4 +101,8 @@
 
 #spotify {
   transform: scale(1.16);
+
+  @include respond(phone) {
+    transform: scale(1);
+  }
 }
