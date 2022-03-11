@@ -1,13 +1,56 @@
 .youTube {
   &__embed {
-    padding: 5rem;
-    width: 100%;
+    padding: 5rem 2rem;
+    width: 100vw;
     // height: auto;
     aspect-ratio: 1.77777777777778;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     max-height: 100rem;
+    gap: 5rem;
+  }
+
+  &__pseudo {
+    width: 100vw;
+    background-color: var(--clr-tan);
+    z-index: 100;
+    // height: 50rem;
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+
+    img {
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    &::before {
+      content: "Laughing Stock @ The Fox";
+      font-size: 3rem;
+      font-family: var(--typo-serif);
+      font-weight: 300;
+      margin-left: 1rem;
+    }
+    &--real {
+      background: var(--clr-tan);
+      // width: 100vw;
+      z-index: 100;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      border-radius: 5px;
+    }
   }
   // &__hide {
   //   height: 5rem;
