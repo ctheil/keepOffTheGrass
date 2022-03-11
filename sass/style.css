@@ -464,6 +464,7 @@ h2 {
 @media (max-width: 56.25em) {
   .schedEmbed {
     padding: 5rem;
+    width: 100%;
   }
 }
 
@@ -622,6 +623,7 @@ h2 {
   padding: 15rem 5rem;
   background-color: var(--clr-tan);
   height: 100vh;
+  width: 100%;
 }
 
 .section-contact__box {
