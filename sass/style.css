@@ -426,7 +426,7 @@ h2 {
 }
 
 .youTube__embed {
-  padding-top: 5rem;
+  padding: 5rem;
   width: 100%;
   aspect-ratio: 1.77777777777778;
   display: -webkit-box;
